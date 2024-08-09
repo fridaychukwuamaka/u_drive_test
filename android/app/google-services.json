@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "209462993519",
+    "project_id": "udrive-e33c1",
+    "storage_bucket": "udrive-e33c1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:209462993519:android:9a1fc8bfd4e9b59a1be39a",
+        "android_client_info": {
+          "package_name": "com.exa"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBK7eJvupt0MFLMvwCP6tQaBNpSOSCFbgI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
