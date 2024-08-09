@@ -1,8 +1,8 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+
 import '../../features/auth/domain/usecases/user_auth_state.dart';
 import '../../features/auth/presentation/ui/pages/login_intro_page.dart';
 import '../../features/auth/presentation/ui/pages/login_page.dart';
@@ -11,6 +11,7 @@ import '../../features/home/presentation/ui/pages/home_page.dart';
 import '../../features/onboarding/presentation/ui/pages/onboarding_page_1.dart';
 import '../../features/onboarding/presentation/ui/pages/onboarding_page_2.dart';
 import '../../features/onboarding/presentation/ui/pages/select_user_type_page.dart';
+import '../../features/onboarding/presentation/ui/pages/splash_page.dart';
 import '../top_level_provider.dart';
 
 part 'route_name.dart';
@@ -38,6 +39,13 @@ class AppRouter {
             name: RouteName.login,
             builder: (context, state) {
               return const LoginPage();
+            },
+          ),
+          GoRoute(
+            path: '/splash',
+            name: RouteName.splash,
+            builder: (context, state) {
+              return const SplashPage();
             },
           ),
           GoRoute(

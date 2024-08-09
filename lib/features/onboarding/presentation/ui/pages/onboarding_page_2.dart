@@ -45,9 +45,12 @@ class OnboardingPage2 extends StatelessWidget {
                 const SizedBox(height: 24),
                 InkWell(
                   onTap: () => context.pushNamed(RouteName.loginIntro),
-                  child: SvgPicture.asset('assets/icons/progress_button.svg'),
+                  child: SvgPicture.asset(
+                    'assets/icons/progress_button.svg',
+                    height: context.height * 0.115,
+                  ),
                 ),
-                const SizedBox(height: 40),
+                const SizedBox(height: 20),
               ],
             ),
           ],

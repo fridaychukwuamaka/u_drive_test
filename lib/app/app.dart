@@ -4,6 +4,7 @@ import 'package:toastification/toastification.dart';
 
 import '../core/navigation/app_router.dart';
 import '../core/ui/themes/theme.dart';
+import '../features/onboarding/presentation/ui/pages/splash_page.dart';
 
 class MainApp extends ConsumerWidget {
   const MainApp({super.key});
@@ -21,6 +22,14 @@ class MainApp extends ConsumerWidget {
         theme: AppThemes.light,
         themeMode: ThemeMode.light,
         debugShowCheckedModeBanner: false,
+        builder: (context, child) {
+          return Stack(
+            children: [
+              child!,
+              const SplashPage(),
+            ],
+          );
+        },
       ),
     );
   }

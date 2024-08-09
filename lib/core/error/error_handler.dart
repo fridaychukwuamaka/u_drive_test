@@ -10,19 +10,25 @@ class ExceptionHandler {
   }
 
   static String getErrorMsg(error) {
-    if (error is FirebaseException) {
-      debugPrint('FirebaseException: ${error.code}');
+    if (error is FirebaseAuthException) {
+      debugPrint('FirebaseAuthException: ${error.code}');
       switch (error.code) {
-        case 'user-not-found':
-          return 'User with this email does not exist';
+        case 'wrong-password':
+        case 'INVALID_LOGIN_CREDENTIALS':
+          return 'Email or password is incorrect';
         case 'email-already-in-use':
           return 'User with this email already exists';
+        case 'user-not-found':
+          return 'User with this email does not exist';
+        default:
+          return 'Sorry, something went wrong';
+      }
+    } else if (error is FirebaseException) {
+      debugPrint('FirebaseException: ${error.code}');
+      switch (error.code) {
         case 'network-request-failed':
         case 'deadline-exceeded':
           return 'No internet connection';
-        case 'invalid-credential':
-        case 'wrong-password':
-          return 'Email or password is incorrect';
         case 'too-many-requests':
           return 'Too many attempts. Please try again later';
         default:
