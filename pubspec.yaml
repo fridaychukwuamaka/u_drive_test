@@ -33,6 +33,21 @@ dev_dependencies:
   build_runner: ^2.4.6
   freezed: ^2.4.5
   json_serializable: ^6.7.1
+  flutter_native_splash: ^2.4.1
+
+# Splash Screen Configuration
+flutter_native_splash:
+  color: "#E2F5FC"
+  image: "assets/images/logo.png"
+  image_dark: "assets/images/logo.png"
+  android: true
+  ios: false
+  web: false
+  android_12:
+    icon_background_color: "#E2F5FC"
+    icon_background_color_dark: "#E2F5FC"
+    image: "assets/images/logo.png"
+    image_dark: "assets/images/logo.png"
 
 flutter:
 
