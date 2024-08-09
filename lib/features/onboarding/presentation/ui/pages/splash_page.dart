@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 
 import '../../../../../core/extensions/extension.dart';
@@ -21,6 +23,9 @@ class _SplashPageState extends State<SplashPage> {
 
   @override
   Widget build(BuildContext context) {
+    if (Platform.isIOS) {
+      return const SizedBox.shrink();
+    }
     return FutureBuilder(
       future: init(),
       builder: (context, snapshot) {
