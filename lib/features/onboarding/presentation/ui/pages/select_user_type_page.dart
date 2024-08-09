@@ -54,7 +54,7 @@ class SelectUserTypePage extends StatelessWidget {
               children: [
                 const SizedBox(height: 30),
                 Text(
-                  '👋🏻  Hello',
+                  '👋🏻 Hello',
                   textAlign: TextAlign.center,
                   style: AppTextStyle.display4.copyWith(),
                 ),
